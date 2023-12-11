@@ -1,0 +1,180 @@
+@import '../../assets/generals/colors';
+.mainTitle {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: $input;
+	overflow: hidden;
+	> h1{
+		font-family: 'options', monospace;
+		color: $text;
+		font-size: 5rem;
+		white-space: wrap;
+		font-weight: 950;
+		> span{
+			color: $capi;
+		}
+	}
+	> .leafs{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		transition: top .5s 0s ease-out, left .5s .5s ease-out, right .5s .5s ease-out;
+	}
+
+	> .leafl{
+		right: 100%;
+	}
+
+	> .leafr{
+		left: 100%;
+	}
+
+	> .leafb{
+		top: 100%;
+	}
+
+	> .leafb.show{
+		top: 0;
+	}
+	> .leafl.show{
+		right: 0;
+	}
+	> .leafr.show{
+		left: 0;
+	}
+}
+
+.aplace{
+	width: 100%;
+	height: 95vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	background: $hover;
+	flex-direction: column;
+	position: relative;
+	gap: 5rem;
+	overflow: hidden;
+	> h2{
+		font-family: 'options', monospace;
+		color: $text;
+		font-size: 5rem;
+		white-space: wrap;
+		font-weight: 950;
+		> span{
+			color: $capi;
+		}
+	}
+	> .aplaceExplanation{
+		display: flex;
+		width: 72.5%;
+		gap: 7.5rem;
+		> img{
+			width: 25rem;
+			background-color: $text;
+			border-radius: 1rem;
+			padding: 1rem;
+			object-fit: cover;
+			opacity: 0;
+			transition: opacity .5s .5s ease-out;
+		}
+		> img.show{
+			opacity: 1;
+
+		}
+		> p{
+			font-family: 'options', monospace;
+			color: $text;
+			font-size: 1.75rem;
+			white-space: wrap;
+			font-weight: 600;
+			letter-spacing: .1rem;
+			white-space: balance;
+			> span{
+				color: $capi;
+				font-weight: 700;
+			}
+		}
+	}
+	> .voices{
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		transition: left .5s .5s ease-out, right .5s .5s ease-out;
+		
+	}
+	> .voicesr{
+		left: 100%;
+	}
+	> .voicesl{
+		right: 100%;
+	}
+}
+
+
+.aplace.show {
+	> .voicesr{
+		left: 0;
+	}
+	> .voicesl{
+		right: 0;
+	}
+}
+
+.secure{
+	width: 100%;
+	height: 95vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	background: $input;
+	flex-direction: column;
+	position: relative;
+	gap: 5rem;
+	> h2{
+		font-family: 'options', monospace;
+		color: $text;
+		font-size: 5rem;
+		white-space: wrap;
+		font-weight: 950;
+		> span{
+			color: $capi;
+		}
+	}
+	> .secureExplanation{
+		display: flex;
+		width: 80%;
+		gap: 7.5rem;
+		> img{
+			width: 35rem;
+			background-color: $text;
+			border-radius: 1rem;
+			padding: 1rem;
+			object-fit: cover;
+			opacity: 0;
+			transition: opacity .5s .5s ease-out;
+		}
+		> img.show{
+			opacity: 1;
+
+		}
+		> p{
+			font-family: 'options', monospace;
+			color: $text;
+			font-size: 1.75rem;
+			white-space: wrap;
+			font-weight: 600;
+			letter-spacing: .1rem;
+			white-space: balance;
+			> span{
+				color: $capi;
+				font-weight: 700;
+			}
+		}
+	}
+}

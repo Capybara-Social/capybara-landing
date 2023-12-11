@@ -1,0 +1,104 @@
+
+
+
+@import './assets/generals/colors';
+
+.menu{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 100%;
+	min-height: 10%;
+	display: grid;
+	padding: 1rem;
+	grid-template-columns: 25% 50% 25%;
+	grid-column: auto;
+	grid-template-rows: repeat(1, minmax(10%, 100%));
+	align-items: center;
+	justify-items: center;
+	z-index: 1000;
+	> .logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		width: 100%;
+		text-decoration: none;
+		> img{
+			height: 3.5rem;
+			display: flex;
+			aspect-ratio: 1/1;
+		}
+		> span{
+			color: $capi;
+			font-family: 'newWorld';
+			font-size: 2rem;
+		}
+	}
+	> .navigation{
+		width: 100%;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		
+		> ul{
+			display: flex;
+			width: fit-content;
+			list-style: none;
+			justify-content: space-around;
+			width: 100%;
+			height: 5rem;
+			> li{
+				font-family: 'options', monospace;
+				font-weight: 600;
+				display: flex;
+				width: 100%;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
+				> a{
+					text-decoration: none;
+					color: $text;
+					position: relative;
+				}
+				> a::before{
+					width: 100%;
+					max-width: 0;
+					content: "";
+					position: absolute;
+					height: 3px;
+					left: 0;
+					top: calc(100% - 3.5px);
+					background: $capi;
+					z-index: -1;
+					transition: max-width .1s;
+				}
+				> a:hover::before{
+					max-width: 100%;
+				}
+				.ultranav{
+					color: transparent;
+					background: $golden;
+					background-clip: text;
+					font-size: 1.5rem;
+				}
+			}
+			
+		}
+	}
+	> .enter{
+		font-family: 'options';
+		font-weight: 500;
+		color: $text;
+		width: 10%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: calc(1rem + 3.5rem + 8 * 1.1rem);
+		padding: 1rem;
+		background-color: $capi;
+		border-radius: 1rem;
+		text-decoration: none;
+	}
+}
